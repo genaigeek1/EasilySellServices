@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Sample Mindmap</title>
-  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
 </head>
 <body>
-  <svg id="mindmap"></svg>
-  <script type="text/markdown">
-    # Sample Topic
-    ## Subtopic A
-    - Point 1
-    - Point 2
-    ## Subtopic B
-    - Point 3
-  </script>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(()=>{setTimeout(()=>{const{markmap:x,mm:K}=window,P=new x.Toolbar;P.attach(K);const F=P.render();F.setAttribute("style","position:absolute;bottom:20px;right:20px"),document.body.append(F)})})()</script><script>((b,L,T,D)=>{const H=b();window.mm=H.Markmap.create("svg#mindmap",(L||H.deriveOptions)(D),T)})(()=>window.markmap,null,{"content":"Databricks Cost Optimization","children":[{"content":"Cluster Management","children":[{"content":"Use cluster policies to enforce guardrails","children":[],"payload":{"tag":"li","lines":"3,4"}},{"content":"Enable autoscaling for workloads","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"Prefer spot instances for non-critical jobs","children":[],"payload":{"tag":"li","lines":"5,6"}},{"content":"Auto-terminate idle clusters","children":[],"payload":{"tag":"li","lines":"6,8"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"Job Execution","children":[{"content":"Schedule jobs during off-peak hours","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"Use Delta Cache to speed up repeated queries","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"Monitor performance with Ganglia / Spark UI","children":[],"payload":{"tag":"li","lines":"11,13"}}],"payload":{"tag":"h2","lines":"8,9"}},{"content":"Storage Optimization","children":[{"content":"Store data in Delta Lake format","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"Optimize file sizes (e.g., 128MB parquet blocks)","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"Use <code>OPTIMIZE</code> and <code>ZORDER</code> to improve I/O","children":[],"payload":{"tag":"li","lines":"16,18"}}],"payload":{"tag":"h2","lines":"13,14"}},{"content":"Cost Monitoring &amp; Governance","children":[{"content":"Enable usage logging and cost reports","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"Apply tags to jobs and clusters","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"Set budget alerts and limits with cloud provider tools","children":[],"payload":{"tag":"li","lines":"21,23"}}],"payload":{"tag":"h2","lines":"18,19"}},{"content":"Best Practices","children":[{"content":"Prefer SQL Warehouses over all-purpose clusters for BI","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"Archive infrequently accessed data","children":[],"payload":{"tag":"li","lines":"25,26"}},{"content":"Reuse existing clusters for batch jobs","children":[],"payload":{"tag":"li","lines":"26,27"}}],"payload":{"tag":"h2","lines":"23,24"}}],"payload":{"tag":"h1","lines":"0,1"}},null)</script>
 </body>
 </html>
